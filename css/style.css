@@ -14,10 +14,10 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  height: 770px;
   min-height: 600px;
   background:
-    linear-gradient( to left, rgba(136,211,206,0.8) 0%, rgba(110,69,226, 0.8) 100%),
+    linear-gradient( to left, rgba(136,211,206,0.5) 0%, rgb(110,69,226) 100%),
     url("../img/img-bg.png") no-repeat center;
   background-size: cover;
 }
@@ -32,7 +32,7 @@ html, body {
 
 .menu ul{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
   font-weight: 500;
 }
@@ -46,11 +46,13 @@ html, body {
   text-decoration: none;
 }
 
+
+
 li:nth-last-child(2) {
   margin-right: 30px;
 }
 
-.get-started-btn {
+.header-btn {
   text-transform: uppercase;
   border: 1px solid #fff;
   padding: 15px 20px;
@@ -64,6 +66,28 @@ li:nth-last-child(2) {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transition: .5s ease-out;
+  opacity: 0;
+}
+
+.menu li:not(:last-child):hover::after  {
+  opacity: 1;
+  transform: translateY(10px);
+
 }
 
 .main-text h3::after {
@@ -86,7 +110,7 @@ li:nth-last-child(2) {
   vertical-align: middle;
 }
 
-h1, h3,h2 {
+h1, h3, h2 {
   margin-bottom: 20px;
 }
 
@@ -104,6 +128,7 @@ h1 {
 h2 {
   font-size: 60px;
   line-height: 72px;
+  font-weight: 500;
 }
 
 .main-arrow {
@@ -129,7 +154,7 @@ h2 {
   flex-direction: column;
   text-align: center;
   background-color: #f9fafc;
-  height: 1000px;
+  height: 1135px;
   min-width: 600px;
   color: #9fa4af;
   padding-top: 120px;
@@ -177,9 +202,12 @@ h2 {
   vertical-align: middle;
 }
 
+.table-header {
+  margin-bottom: 100px;
+}
+
 .table h2{
   color: #4f4f6f;
-  font-weight: 500;
 }
 
 .price-tags {
@@ -198,7 +226,7 @@ h2 {
   padding: 65px 70px;
   border: 1px solid #d7dbe8;
   border-radius: 30px;
-  transition: .2s;
+  transition: .5s;
 }
 
 .price-tag:hover {
@@ -218,6 +246,7 @@ h2 {
 }
 
 .btn {
+  transition: .5s;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 32px;
@@ -234,4 +263,101 @@ h2 {
   color: #fff;
   background-color: rgb(110, 69, 226);
   border-color: rgb(110, 69, 226);
+}
+
+.call-to-action {
+  text-align: center;
+  padding: 180px 0;
+  background:
+    linear-gradient( to left, rgba(136,211,206,0.5) 0%, rgb(110,69,226) 100%),
+    url("../img/map.png") no-repeat 50% -100%;
+}
+
+.footer {
+  color: #9fa4af;
+}
+
+.footer-top {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 15vh;
+}
+
+.footer-menu ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 500;
+}
+
+.footer-menu {
+  width: 60%;
+}
+
+.footer-menu-link {
+  color: #6a6a77;
+  text-decoration: none;
+}
+
+.footer-btn {
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid rgb(110, 69, 226);
+  background-color: rgb(110, 69, 226);
+  padding: 15px 20px;
+  border-radius: 100px;
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.footer-menu li {
+  position: relative;
+}
+
+.footer-menu li::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #6a6a77;
+  transition: .5s ease-out;
+  opacity: 0;
+}
+
+.footer-menu li:not(:last-child):hover::after  {
+  opacity: 1;
+  transform: translateY(10px);
+
+}
+
+.line {
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #6a6a77;
+  margin: auto;
+}
+
+.footer-bottom {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 7vh;
+}
+
+.social-btn a{
+  color: #6a6a77;
+  transition: .5s;
+}
+
+.social-btn a:hover{
+  color: rgb(110, 69, 226);
 }
